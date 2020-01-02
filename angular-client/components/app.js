@@ -1,7 +1,8 @@
 
 angular.module('hackednews')
 .controller('AppCtrl', function() {
-  this.topTenList = articles
+
+  this.topTenList = articles.sort((a,b)=>{ return a.score- b.score}).reverse().slice(0,9)
 })
 .directive('app', () => {
   return {
