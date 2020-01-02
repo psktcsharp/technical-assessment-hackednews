@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 // app.use(express.static(__dirname + '/../react-client/dist'));
 
 // UNCOMMENT FOR ANGULAR
-// app.use(express.static(__dirname + '/../angular-client'));
-// app.use(express.static(__dirname + '/../node_modules'));
+app.use(express.static(__dirname + '/../angular-client'));
+app.use(express.static(__dirname + '/../node_modules'));
 
 app.use('/api/story', storyRouter);
 

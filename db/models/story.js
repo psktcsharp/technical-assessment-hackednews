@@ -1,15 +1,23 @@
 var mongoose = require('mongoose');
 
+// var storySchema = mongoose.Schema({
+//   id: {
+//     type: Number,
+//     unique: true
+//   },
+//   by: String,
+//   title: String,
+//   score: Number
+// });
 var storySchema = mongoose.Schema({
-  id: {
-    type: Number,
-    unique: true
-  },
-  by: String,
-  title: String,
-  score: Number
-});
-
+    id: {
+      type: Number,
+      unique: true
+    },
+    by: {id: String},
+    title: String,
+    score: Number
+  });
 var StoryModel = mongoose.model('Story', storySchema);
 
 // findAll retrieves all stories

@@ -1,5 +1,7 @@
+
 angular.module('hackednews')
 .controller('AppCtrl', function() {
+  this.topTenList = articles
 })
 .directive('app', () => {
   return {
